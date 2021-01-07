@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+    <title>sidebox</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+    	body {font-family:微軟正黑體,Helvetica；}
+        img {}
+        div {}
+        .obsolute {float:right;
+        		   background-color:rgba(100%,100%,100%,0.6);
+        		   width:25%; z-index:3;
+                   height:auto;
+        		   overflow-y:hidden;
+                   overflow-x:hidden;
+        		   position:absolute;
+        		   top:0.9%;
+        		   left:0.5%;}
+        .left  	  {position:absolute;float:left;}
+        h1   {text-align:left;margin-left: 20px;font-size: 300%;}
+        h2   {text-align:right;margin-right: 20px;font-size:250%;}
+    </style>
+
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    
+     <script type="text/javascript">
+	 
+	 </script>
+
+</head>
+
+
+<body>
+    <img id="pic" src="1.jpg" style="z-index:1;width:80%;height:auto;">
+    <div>
+        <div class="obsolute"><h1 id="locc">基隆</h1><h2 id="loce">Keelung</h2></div>
+
+        <p>"臺灣夜生活"這個網站是2020年建立，目的是希望可以讓更多知道臺灣晚上有什麼地方可以去，這個網站可以說是一個夜生活的整合，通過大數據和網絡平臺，一個網站滿足不同的需求。</p><p>目前平臺提供大臺北地區（臺北市、新北市、基隆市）的夜點，基本的地點、營業時間、聯絡方式等的資訊一應俱全，能讓你"足不出戶知天下"。</br></p>
+    </div>
+    <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button_count&size=small&width=100&height=20&appId" width="100" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+    <script type="text/javascript">
+        var times = 1;
+        var locationc = ["", "基隆", "臺北", "新北"];
+        var locatione = ["", "Keelung", "Taipei", "New Taipei"];
+
+        setInterval(changepic, 2500);
+        function changepic() {
+            if (times == 3) {
+                times = 1;
+            }
+            else {
+                times++;
+            }
+            document.getElementById("pic").src = times + ".jpg";
+            document.getElementById("locc").innerHTML = locationc[times];
+            document.getElementById("loce").innerHTML = locatione[times];
+        }
+    </script>
+</body>
+
+</html>
